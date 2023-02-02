@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+
+        <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+        <menuitem id="ramalan_menu_root" name="EOQ dan ROP" web_icon="ramalan,static/description/icon.png" sequence="1" />  
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="ramalan_barang_menu_act" name="Barang" parent="ramalan_menu_root" action="barang_action" sequence="10" groups="ramalan.sales,ramalan.user,ramalan.admin"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="ramalan_barang_masuk_menu_act" name="Barang Masuk" parent="ramalan_menu_root" action="barang_masuk_action" sequence="20" groups="ramalan.user,ramalan.admin"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="ramalan_reorder_menu_act" name="Reorder" parent="ramalan_menu_root" action="reorder_action" sequence="30" groups="ramalan.user,ramalan.admin,ramalan.spv"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="ramalan_transaksi_menu_act" name="Transaksi" parent="ramalan_menu_root" action="transaksi_action" sequence="40" groups="ramalan.sales,ramalan.admin"/>
+
+     <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="ramalan_data_ramalan_menu_act" name="Ramalan Data" parent="ramalan_menu_root" action="ramalan_data_action" sequence="50"/>
+
+
+        <!-- This Menu Item must have a parent and an action -->
+         <menuitem id="ramalan_pelanggan_menu_act" name="Pelanggan " parent="ramalan_menu_root" action="pelanggan_action" sequence="60" groups="ramalan.sales,ramalan.admin"/>
+
+
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="laporan_menu_categ" name="Laporan" parent="ramalan_menu_root" sequence="70"/>
+
+        <menuitem id="ramalan_laporan_pemesanan_menu_act" name="Laporan Transaksi " parent="laporan_menu_categ" action="pemesanan_action" sequence="10" groups="ramalan.spv"/>
+
+        <menuitem id="ramalan_laporan_barang_masuk_menu_act" name="Laporan Barang Masuk " parent="laporan_menu_categ" action="barang_masuk_action" sequence="20" groups="ramalan.spv"/>
+        
+        <menuitem id="ramalan_laporan_barang_menu_act" name="Laporan Barang " parent="laporan_menu_categ" action="barang_action" sequence="30" groups="ramalan.spv"/>
+  
+        <menuitem id="ramalan_laporan_reorder_menu_act" name="Laporan Reorder " parent="laporan_menu_categ" action="reorder_action" sequence="40" groups="ramalan.spv"/>
+
+        <menuitem id="ramalan_laporan_menu_act" name="Laporan " parent="laporan_menu_categ" action="laporan_action" sequence="50" groups="ramalan.spv,ramalan.admin"/>
+
+    </data>
+</odoo>

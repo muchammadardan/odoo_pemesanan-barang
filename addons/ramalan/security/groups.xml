@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+
+        <!-- GROUP -->
+        <record model="ir.module.category" id="ramalan_group">
+            <field name="name">Kimia Farma</field>
+            <field name="description">This group is for parent other group</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <!-- USER GUDANG -->
+        <record model="res.groups" id="user">
+            <field name="name">User</field>
+            <field name="category_id" ref="ramalan_group"/>
+        </record>
+
+        <!-- USER GUDANG -->
+        <record model="res.groups" id="sales">
+            <field name="name">Sales</field>
+            <field name="category_id" ref="ramalan_group"/>
+        </record>
+
+        <!-- USER GUDANG -->
+        <record model="res.groups" id="spv">
+            <field name="name">SPV</field>
+            <field name="category_id" ref="ramalan_group"/>
+        </record>
+
+        <!-- ADMIN -->
+        <record model="res.groups" id="admin">
+            <field name="name">Admin</field>
+            <field name="category_id" ref="ramalan_group"/>
+           <field name="implied_ids" eval="[
+                (4, ref('user'))
+            ]"/>
+        </record>
+
+    </data>
+</odoo>

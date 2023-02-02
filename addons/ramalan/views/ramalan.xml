@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+
+        <!-- ramalan tree view -->
+        <record id='ramalan_view_tree' model='ir.ui.view'>
+            <field name='name'>ramalan.view.tree</field>
+            <field name='model'>ramalan</field>
+            <field name='arch' type='xml'>
+                <tree create="0">
+                    <!-- Add your fields here -->
+                    <field name="barang_id"/>
+                    <field name="eoq"/>
+                    <field name="toc"/>
+                    <field name="tcc"/>
+                    <field name="tc"/>
+                    <field name="f"/>
+                    <field name="t"/>
+                    <field name="exp"/>
+                    <field name="ss"/>
+                    <field name="rop"/>
+                    
+                </tree>
+            </field>
+        </record>
+
+        <!-- ramalan form view -->
+        <record id='ramalan_view_form' model='ir.ui.view'>
+            <field name='name'>ramalan.view.form</field>
+            <field name='model'>ramalan</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <sheet>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="barang_id"/>
+                            <field name="eoq"/>
+                            <field name="toc"/>
+                            <field name="tcc"/>
+                            <field name="tc"/>
+                            <field name="f"/>
+                            <field name="t"/>
+                            <field name="exp"/>
+                            <field name="ss"/>
+                            <field name="rop"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ramalan search view -->
+        <record id='ramalan_view_search' model='ir.ui.view'>
+            <field name='name'>ramalan.view.search</field>
+            <field name='model'>ramalan</field>
+            <field name='arch' type='xml'>
+                <search string='Search Description'>
+                    <!-- Add your fields here -->
+                    
+                   
+                </search> 
+            </field>
+        </record>
+
+        <!-- ramalan action window -->
+        <record id='ramalan_action' model='ir.actions.act_window'>
+            <field name='name'>Ramalan</field>
+            <field name='type'>ir.actions.act_window</field>
+            <field name='res_model'>ramalan</field>
+            <field name='view_mode'>tree,form,graph</field>
+            <field name='help' type='html'>
+                <p class='oe_view_nocontent_create'>
+                    <!-- Add Text Here -->
+                    Data not found!
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                    You can add new by click new button. 
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

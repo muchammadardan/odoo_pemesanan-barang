@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+
+        <!-- laporan tree view -->
+        <record id='laporan_view_tree' model='ir.ui.view'>
+            <field name='name'>laporan.view.tree</field>
+            <field name='model'>laporan</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <!-- Add your fields here -->
+                    <field name='barang_id'/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- laporan form view -->
+        <record id='laporan_view_form' model='ir.ui.view'>
+            <field name='name'>laporan.view.form</field>
+            <field name='model'>laporan</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <sheet>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name='barang_id'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- laporan search view -->
+        <record id='laporan_view_search' model='ir.ui.view'>
+            <field name='name'>laporan.view.search</field>
+            <field name='model'>laporan</field>
+            <field name='arch' type='xml'>
+                <search string='Search Description'>
+                    <!-- Add your fields here -->
+                    <field name='barang_id'/>
+                </search>
+            </field>
+        </record>
+
+        <!-- laporan action window -->
+        <record id='laporan_action' model='ir.actions.act_window'>
+            <field name='name'>Laporan</field>
+            <field name='type'>ir.actions.act_window</field>
+            <field name='res_model'>laporan</field>
+            <field name='view_mode'>tree,form,pivot</field>
+            <field name='help' type='html'>
+                <p class='oe_view_nocontent_create'>
+                    <!-- Add Text Here -->
+                    Data not found!
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                    You can add new by click new button. 
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

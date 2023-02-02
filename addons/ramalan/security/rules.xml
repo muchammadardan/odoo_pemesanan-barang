@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+        <!-- user -->
+        <!-- Company-restricted Records -->
+        <record model='ir.rule' id='ramalan_user'>
+            <field name='name'>Restricted Record: user</field>
+            <field name='model_id' ref='model_barang'/>
+           <field name="groups" eval="[(4, ref('ramalan.user'))]"/>
+            <field name="domain_force">
+                [(1, '=', 1)]
+            </field>
+        </record>
+
+        <!-- Company-restricted Records -->
+        <record model="ir.rule" id="ramalan_admin">
+            <field name="name">Restricted Record: Laporan Account User</field>
+            <field name="model_id" ref="model_barang"/>
+            <field name="groups" eval="[(4, ref('ramalan.admin'))]"/>
+            <field name="domain_force">
+                [(1, '=', 1)]
+            </field>
+        </record>
+
+    </data>
+</odoo>

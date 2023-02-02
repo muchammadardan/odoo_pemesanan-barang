@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+
+        <!-- BarangMasuk tree view -->
+        <record id='barang_masuk_view_tree' model='ir.ui.view'>
+            <field name='name'>barang.masuk.view.tree</field>
+            <field name='model'>barang.masuk</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <!-- Add your fields here -->
+                    <field name="no"/>
+                    <field name="tanggal"/>
+                    <field name="barang_ids"/>
+
+                    <field name="total"/>
+                   <!-- <field name="barang_ids"> 
+                        <tree editable='top'>
+                            <field name="barang_id"/>
+                            <field name="jumlah"/>
+                        </tree>
+                   </field> -->
+
+                   <field name="total"/>
+
+                   
+                </tree>
+            </field>
+        </record>
+
+        <!-- BarangMasuk form view -->
+        <record id='barang_masuk_view_form' model='ir.ui.view'>
+            <field name='name'>barang.masuk.view.form</field>
+            <field name='model'>barang.masuk</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <sheet>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="no"/>
+                            <field name="tanggal"/>
+
+                            <field name="barang_ids"> 
+                                    <tree editable='top'>
+                                        <field name="barang_id"/>
+                                        <field name="jumlah"/>
+                                    </tree>
+                            </field>
+
+                            <field name="total"/>
+                            
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- BarangMasuk search view -->
+        <record id='barang_masuk_view_search' model='ir.ui.view'>
+            <field name='name'>barang.masuk.view.search</field>
+            <field name='model'>barang.masuk</field>
+            <field name='arch' type='xml'>
+                <search string='Search Description'>
+                    <!-- Add your fields here -->
+                    
+                    <field name="no"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- BarangMasuk action window -->
+        <record id='barang_masuk_action' model='ir.actions.act_window'>
+            <field name='name'>Barang Masuk</field>
+            <field name='type'>ir.actions.act_window</field>
+            <field name='res_model'>barang.masuk</field>
+            <field name='view_mode'>tree,form,pivot</field>
+            <field name='help' type='html'>
+                <p class='oe_view_nocontent_create'>
+                    <!-- Add Text Here -->
+                    Data not found!
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                    You can add new by click new button. 
+                </p>
+            </field>
+        </record>
+
+        <record id="laporan_pivot_action" model="ir.actions.act_window">
+            <field name="name">Barang Masuk</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">barang.masuk</field>
+            <field name="view_mode">pivot</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK --> 
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

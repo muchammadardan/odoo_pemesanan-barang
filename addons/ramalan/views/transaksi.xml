@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+
+        <!-- transaksi tree view -->
+        <record id='transaksi_view_tree' model='ir.ui.view'>
+            <field name='name'>transaksi.view.tree</field>
+            <field name='model'>transaksi</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <!-- Add your fields here -->
+                    <field name="nota"/>
+                    <field name="tanggal"/>
+                    <field name="pelanggan_id"/>
+                    <field name="pelanggan_id"/>
+                        <field name="pemesanan_ids"> 
+                            <tree name="top">
+                                <field name="barang_id"/>
+                            </tree>
+                    </field>
+                    <!-- <field name="total_brg"/> -->
+                </tree>
+            </field>
+        </record>
+
+        <!-- pemesanan form view -->
+        <record id='transaksi_view_form' model='ir.ui.view'>
+            <field name='name'>transaksi.view.form</field>
+            <field name='model'>transaksi</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <sheet>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="nota"/>
+                            <field name="tanggal"/>
+                            <field name="pelanggan_id"/>
+                            <field name="pemesanan_ids"> 
+                                <tree name="top">
+                                    <field name="barang_id"/>
+                                    <field name="harga"/>
+                                    <field name="jumlah"/>
+                                    <field name="total"/>
+                                </tree>
+                            </field>
+                            <!-- <field name="total_brg"/> -->
+                            <field name="sub_total"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- pemesanan search view -->
+        <record id='transaksi_view_search' model='ir.ui.view'>
+            <field name='name'>transaksi.view.search</field>
+            <field name='model'>transaksi</field>
+            <field name='arch' type='xml'>
+                <search string='Search Description'>
+                    <!-- Add your fields here -->
+                    <field name="pemesanan_ids"> 
+                            <tree name="top">
+                                <field name="barang_id"/>
+                                <field name="harga"/>
+                                <field name="jumlah"/>
+                                <field name="total"/>
+                            </tree>
+                    </field>
+                   
+                </search>
+            </field>
+        </record>
+
+        <!-- pemesanan action window -->
+        <record id='transaksi_action' model='ir.actions.act_window'>
+            <field name='name'>Transaksi</field>
+            <field name='type'>ir.actions.act_window</field>
+            <field name='res_model'>transaksi</field>
+            <field name='view_mode'>tree,form,pivot</field>
+            <field name='help' type='html'>
+                <p class='oe_view_nocontent_create'>
+                    <!-- Add Text Here -->
+                    Data not found!
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                    You can add new by click new button. 
+                </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo> 

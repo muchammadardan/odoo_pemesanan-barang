@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate='1'> 
+        <record id='reorder' model='ir.sequence'>
+            <field name="name">Reorder</field>
+            <field name="code">reorder</field>
+            <field name="prefix">reorder/%(year)s/%(month)s/</field>
+        </record>
+    </data>
+</odoo>

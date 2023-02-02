@@ -1,0 +1,32 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+ramalan_barang_user,RAMALAN Barang User,ramalan.model_barang,ramalan.user,TRUE,TRUE,TRUE,TRUE
+ramalan_barang_masuk_user,RAMALAN Barang Masuk User,ramalan.model_barang_masuk,ramalan.user,TRUE,TRUE,TRUE,TRUE
+ramalan_barang_masuk_data_user,RAMALAN Barang Masuk Data User,ramalan.model_barangmasuk_data,ramalan.user,TRUE,TRUE,TRUE,TRUE
+ramalan_reorder_user,RAMALAN Reorder User,ramalan.model_reorder,ramalan.user,TRUE,TRUE,TRUE,TRUE
+ramalan_reorder_data_user,RAMALAN Reorder Data User,ramalan.model_reorder_data,ramalan.user,TRUE,TRUE,TRUE,TRUE
+ramalan_transaksi_user,RAMALAN Transaksi User,ramalan.model_transaksi,ramalan.user,TRUE,FALSE,FALSE,FALSE
+ramalan_pelanggan_sales,RAMALAN Pelanggan Sales,ramalan.model_pelanggan,ramalan.sales,TRUE,TRUE,TRUE,TRUE
+ramalan_barang_sales,RAMALAN Barang Sales,ramalan.model_barang,ramalan.sales,TRUE,TRUE,FALSE,FALSE
+ramalan_pemesanan_sales,RAMALAN Pemesanan Sales,ramalan.model_pemesanan,ramalan.sales,TRUE,TRUE,TRUE,TRUE
+ramalan_transaksi_sales,RAMALAN Transaksi Sales,ramalan.model_transaksi,ramalan.sales,TRUE,TRUE,TRUE,TRUE
+ramalan_reorder_spv,RAMALAN Reorder Spv,ramalan.model_reorder,ramalan.spv,TRUE,TRUE,FALSE,FALSE
+ramalan_reorder_data_spv,RAMALAN Reorder Data Spv,ramalan.model_reorder_data,ramalan.spv,TRUE,TRUE,FALSE,FALSE
+ramalan_pemesanan_spv,RAMALAN Pemesanan Spv,ramalan.model_pemesanan,ramalan.spv,TRUE,FALSE,FALSE,FALSE
+ramalan_transaksi_spv,RAMALAN Transaksi Spv,ramalan.model_transaksi,ramalan.spv,TRUE,FALSE,FALSE,FALSE
+ramalan_ramalan_spv,RAMALAN Ramalan Spv,ramalan.model_ramalan,ramalan.spv,TRUE,TRUE,TRUE,TRUE
+ramalan_ramalan_data_spv,RAMALAN Ramalan Data Spv,ramalan.model_ramalan_data,ramalan.spv,TRUE,TRUE,TRUE,TRUE
+ramalan_barang_spv,RAMALAN Barang Spv,ramalan.model_barang,ramalan.spv,TRUE,FALSE,FALSE,FALSE
+ramalan_barang_masuk_spv,RAMALAN Barang Masuk Spv,ramalan.model_barang_masuk,ramalan.spv,TRUE,FALSE,FALSE,FALSE
+ramalan_barang_masuk_data_spv,RAMALAN Barang Masuk Data Spv,ramalan.model_barangmasuk_data,ramalan.spv,TRUE,FALSE,FALSE,FALSE
+ramalan_pelanggan_spv,RAMALAN Pelanggan Spv,ramalan.model_pelanggan,ramalan.spv,TRUE,FALSE,FALSE,FALSE
+ramalan_barang_admin,RAMALAN Barang Admin,ramalan.model_barang,ramalan.admin,TRUE,TRUE,TRUE,TRUE
+ramalan_barang_masuk_admin,RAMALAN Barang Masuk Admin,ramalan.model_barang_masuk,ramalan.admin,TRUE,TRUE,TRUE,TRUE
+ramalan_barang_masuk_data_admin,RAMALAN Barang Masuk Data Admin,ramalan.model_barangmasuk_data,ramalan.admin,TRUE,TRUE,TRUE,TRUE
+ramalan_pelanggan_admin,RAMALAN Pelanggan Admin,ramalan.model_pelanggan,ramalan.admin,TRUE,TRUE,TRUE,TRUE
+ramalan_pemesanan_admin,RAMALAN Pemesanan Admin,ramalan.model_pemesanan,ramalan.admin,TRUE,TRUE,TRUE,TRUE
+ramalan_transaksi_admin,RAMALAN Transaksi Admin,ramalan.model_transaksi,ramalan.admin,TRUE,TRUE,TRUE,TRUE
+ramalan_reorder_admin,RAMALAN Reorder Admin,ramalan.model_reorder,ramalan.admin,TRUE,TRUE,TRUE,TRUE
+ramalan_reorder_data_admin,RAMALAN Reorder Data Admin,ramalan.model_reorder_data,ramalan.admin,TRUE,TRUE,TRUE,TRUE
+ramalan_ramalan_admin,RAMALAN Ramalan Admin,ramalan.model_ramalan,ramalan.admin,TRUE,TRUE,TRUE,TRUE
+ramalan_ramalan_data_admin,RAMALAN Ramalan Data Admin,ramalan.model_ramalan_data,ramalan.admin,TRUE,TRUE,TRUE,TRUE
+ramalan_laporan_admin,RAMALAN Laporan Admin,ramalan.model_laporan,ramalan.admin,TRUE,TRUE,TRUE,TRUE

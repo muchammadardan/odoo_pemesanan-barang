@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+
+        <!-- ramalan.data tree view -->
+        <record id='ramalan_data_view_tree' model='ir.ui.view'>
+            <field name='name'>ramalan.data.view.tree</field>
+            <field name='model'>ramalan.data</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <!-- Add your fields here -->
+                    <field name="tanggal_mulai"/>
+                    <field name="tanggal_selesai"/>
+                   
+                </tree>
+            </field>
+        </record>
+
+        <!-- ramalan.data form view -->
+        <record id='ramalan_data_view_form' model='ir.ui.view'>
+            <field name='name'>ramalan.data.view.form</field>
+            <field name='model'>ramalan.data</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <header>
+                        <button string="Tampilkan" type="object" name="tampilkan"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="tanggal_mulai"/>
+                            <field name="tanggal_selesai"/>
+                         
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ramalan.data search view -->
+        <record id='ramalan_data_view_search' model='ir.ui.view'>
+            <field name='name'>ramalan.data.view.search</field>
+            <field name='model'>ramalan.data</field>
+            <field name='arch' type='xml'>
+                <search string='Search Description'>
+                    <!-- Add your fields here -->
+                    
+              
+                </search>
+            </field>
+        </record>
+
+        <!-- ramalan.data action window -->
+        <record id='ramalan_data_action' model='ir.actions.act_window'>
+            <field name='name'>Ramalan Data</field>
+            <field name='type'>ir.actions.act_window</field>
+            <field name='res_model'>ramalan.data</field>
+            <field name='view_mode'>tree,form</field>
+            <field name='help' type='html'>
+                <p class='oe_view_nocontent_create'>
+                    <!-- Add Text Here -->
+                    Data not found!
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                    You can add new by click new button. 
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

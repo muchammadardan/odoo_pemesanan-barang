@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate='1'> 
+        <record id='barang_masuk' model='ir.sequence'>
+            <field name="name">Barang Masuk</field>
+            <field name="code">barang.masuk</field>
+            <field name="prefix">BM/%(year)s/%(month)s/</field>
+        </record>
+    </data>
+</odoo>

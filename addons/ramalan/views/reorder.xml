@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+
+        <!-- reorder tree view -->
+        <record id='reorder_view_tree' model='ir.ui.view'>
+            <field name='name'>reorder.view.tree</field>
+            <field name='model'>reorder</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <!-- Add your fields here -->
+                    <field name="no"/>
+                    <field name="tanggal"/>
+                    <field name="barang_ids"> 
+                        <tree editable='top'>
+                            <field name="barang_id"/>
+                            <field name="jumlah"/>
+                        </tree>
+                    </field>
+                    <field name="sub_total"/>
+                    <field name="validasi"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- reorder form view -->
+        <record id='reorder_view_form' model='ir.ui.view'>
+            <field name='name'>reorder.view.form</field>
+            <field name='model'>reorder</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <header>
+                        <button string="Simpan" type="object" name="draft_progressbar" class="oe_highlight" attrs="{'invisible': [('validasi','!=','draft')]}" groups="ramalan.spv"/> 
+                        <button string="Terima" type="object" name="order_progressbar" attrs="{'invisible': [('validasi','=','order')]}" groups="ramalan.spv"/>
+                        <button string="Batal" type="object" name="cancel_progressbar" attrs="{'invisible': [('validasi','=','cancel')]}" groups="ramalan.spv"/>
+                        <field name="validasi" widget="statusbar"   />
+                    </header>
+                    <sheet>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="no"/>
+                            <field name="tanggal"/>
+
+                            <field name="barang_ids"> 
+                                <tree editable='top'>
+                                    <field name="barang_id"/>
+                                    <field name="jumlah"/>
+                                </tree>
+                            </field>
+
+                            <field name="sub_total"/>
+                        </group>
+                         
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- reorder search view -->
+        <record id='reorder_view_search' model='ir.ui.view'>
+            <field name='name'>reorder.view.search</field>
+            <field name='model'>reorder</field>
+            <field name='arch' type='xml'>
+                <search string='Search Description'>
+                    <!-- Add your fields here -->
+                    
+                </search>
+            </field>
+        </record>
+
+        <!-- reorder action window -->
+        <record id='reorder_action' model='ir.actions.act_window'>
+            <field name='name'>Reorder</field>
+            <field name='type'>ir.actions.act_window</field>
+            <field name='res_model'>reorder</field>
+            <field name='view_mode'>tree,form,pivot</field>
+            <field name='help' type='html'>
+                <p class='oe_view_nocontent_create'>
+                    <!-- Add Text Here -->
+                    Data not found!
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                    You can add new by click new button. 
+                </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo> 

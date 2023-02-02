@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+
+        <!-- pemesanan tree view -->
+        <record id='pemesanan_view_tree' model='ir.ui.view'>
+            <field name='name'>pemesanan.view.tree</field>
+            <field name='model'>pemesanan</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <!-- Add your fields here -->
+                    <field name="barang_id"/>
+                    <field name="harga"/>
+                    <field name="jumlah"/>
+                    <field name="total"/>
+                    <field name="transaksi_id"/>
+                </tree>
+            </field>    
+        </record>
+
+        <!-- pemesanan form view -->
+        <record id='pemesanan_view_form' model='ir.ui.view'>
+            <field name='name'>pemesanan.view.form</field>
+            <field name='model'>pemesanan</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <sheet>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="barang_id"/>
+                            <field name="harga"/>
+                            <field name="jumlah"/>
+                            <field name="total"/>
+                            <field name="transaksi_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- pemesanan search view -->
+        <record id='pemesanan_view_search' model='ir.ui.view'>
+            <field name='name'>pemesanan.view.search</field>
+            <field name='model'>pemesanan</field>
+            <field name='arch' type='xml'>
+                <search string='Search Description'>
+                    <!-- Add your fields here -->
+                            <field name="barang_id"/>
+                            <field name="harga"/>
+                            <field name="jumlah"/>
+                            <field name="total"/>
+                            <field name="transaksi_id"/>
+                
+                </search>
+            </field>
+        </record>
+
+        <!-- pemesanan action window -->
+        <record id='pemesanan_action' model='ir.actions.act_window'>
+            <field name='name'>Pemesanan</field>
+            <field name='type'>ir.actions.act_window</field>
+            <field name='res_model'>pemesanan</field>
+            <field name='view_mode'>tree,form,pivot</field>
+            <field name='help' type='html'>
+                <p class='oe_view_nocontent_create'>
+                    <!-- Add Text Here -->
+                    Data not found!
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                    You can add new by click new button. 
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

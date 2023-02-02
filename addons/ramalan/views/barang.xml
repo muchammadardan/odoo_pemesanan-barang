@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+
+        <!-- barang tree view -->
+        <record id='barang_view_tree' model='ir.ui.view'>
+            <field name='name'>barang.view.tree</field>
+            <field name='model'>barang</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <!-- Add your fields here -->
+                    <field name="nama"/>
+                    <field name="harga_jual"/>
+                    <field name="jumlah"/>
+                    <field name="satuan"/>
+                    <field name="c"/>
+                    <field name="h"/>
+                    <field name="wd"/>
+                    <field name="l"/>
+                    <field name="ud"/>
+                    <!-- <field name="gambar" widget="image"/> -->
+                    <!-- <field name="kode"/> -->
+                </tree>
+            </field>
+        </record>
+
+        <!-- barang form view -->
+        <record id='barang_view_form' model='ir.ui.view'>
+            <field name='name'>barang.view.form</field>
+            <field name='model'>barang</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <sheet>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="nama"/>
+                            <!-- <field name="kode"/> -->
+                            <field name="harga_jual"/>
+                            <field name="harga_beli"/>
+                            <field name="jumlah"/>
+                            <field name="satuan"/>
+                            <field name="c"/>
+                            <field name="h"/>
+                            <field name="wd"/>
+                            <field name="l"/>
+                            <field name="ud"/>
+                            <!-- <field name="gambar" widget="image"/> -->
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- barang search view -->
+        <record id='barang_view_search' model='ir.ui.view'>
+            <field name='name'>barang.view.search</field>
+            <field name='model'>barang</field>
+            <field name='arch' type='xml'>
+                <search string='Search Description'>
+                    <!-- Add your fields here -->
+                    <field name="nama"/>
+
+                </search>
+            </field>
+        </record>
+
+        <!-- barang action window -->
+        <record id='barang_action' model='ir.actions.act_window'>
+            <field name='name'>Barang</field>
+            <field name='type'>ir.actions.act_window</field>
+            <field name='res_model'>barang</field>
+            <field name='view_mode'>tree,form,pivot</field>
+            <field name='help' type='html'>
+                <p class='oe_view_nocontent_create'>
+                    <!-- Add Text Here -->
+                    Data not found!
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                    You can add new by click new button. 
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

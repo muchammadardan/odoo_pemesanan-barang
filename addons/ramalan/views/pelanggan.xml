@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+
+        <!-- pelanggan tree view -->
+        <record id='pelanggan_view_tree' model='ir.ui.view'>
+            <field name='name'>pelanggan.view.tree</field>
+            <field name='model'>pelanggan</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <!-- Add your fields here -->
+                    <field name='nama'/>
+                    <field name="alamat"/>
+                    <field name="telepon"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- pelanggan form view -->
+        <record id='pelanggan_view_form' model='ir.ui.view'>
+            <field name='name'>pelanggan.view.form</field>
+            <field name='model'>pelanggan</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <sheet>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name='nama'/>
+                            <field name="alamat"/>
+                            <field name="telepon"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- pelanggan search view -->
+        <record id='pelanggan_view_search' model='ir.ui.view'>
+            <field name='name'>pelanggan.view.search</field>
+            <field name='model'>pelanggan</field>
+            <field name='arch' type='xml'>
+                <search string='Search Description'>
+                    <!-- Add your fields here -->
+                    <field name='nama'/>
+                                                
+                </search>
+            </field>
+        </record>
+
+        <!-- pelanggan action window -->
+        <record id='pelanggan_action' model='ir.actions.act_window'>
+            <field name='name'>Pelanggan</field>
+            <field name='type'>ir.actions.act_window</field>
+            <field name='res_model'>pelanggan</field>
+            <field name='view_mode'>tree,form</field>
+            <field name='help' type='html'>
+                <p class='oe_view_nocontent_create'>
+                    <!-- Add Text Here -->
+                    Data not found!
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                    You can add new by click new button. 
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
